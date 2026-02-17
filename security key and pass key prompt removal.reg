@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+; ---------------------------------------------------------
+; Disable Windows FIDO2 Platform Authenticator (Passkeys)
+; ---------------------------------------------------------
+; This stops Windows from offering passkeys or showing
+; the QR-code "Sign in with a passkey" popup.
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FIDO]
+"EnableFIDO"=dword:00000000
+
+
+; ---------------------------------------------------------
+; Disable the Security Key Credential Provider
+; ---------------------------------------------------------
+; Removes the "Security Key" sign-in option from Windows
+; and stops Windows from nagging you about it.
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers\{F8A0D6B4-3F80-4E0F-8C9B-5E1F0F3F8E9A}]
+"Disabled"=dword:00000001
