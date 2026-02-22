@@ -6,8 +6,7 @@ Windows Registry Editor Version 5.00
 ; This stops Windows from offering passkeys or showing
 ; the QR-code "Sign in with a passkey" popup.
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FIDO]
-"EnableFIDO"=dword:00000000
-
+"EnableFIDODeviceLogon"=dword:00000000
 
 ; ---------------------------------------------------------
 ; Disable the Security Key Credential Provider
